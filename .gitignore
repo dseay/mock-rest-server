@@ -1,0 +1,9 @@
+target/
+mockdata/
+jmeter.log
+*.bat
+.classpath
+.project
+.settings/
+dependency-reduced-pom.xml
+
