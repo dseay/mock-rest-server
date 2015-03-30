@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.URI;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -125,7 +126,9 @@ public class RequestRouter implements HttpHandler {
 	
 	private Map<String,String> getQueryParams(HttpExchange t) {
 		Map<String,String> params = new HashMap<String, String>();
-		
+		for (Entry<String, List<String>> entry : t.getRequestHeaders().entrySet()) {
+			params.put(entry.getKey(), entry.getValue().get(0));
+		}
 		return params;
 	}
 
