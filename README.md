@@ -51,3 +51,6 @@ at the end of the path in a Location header returned.
 ```
 Will create two new JSON files under /mockdata/api/user with unique id's
 
+### POST /api/user/action
+
+If there is a file created named 'action' in /mockdata/api/user it will be returned with 200 status
